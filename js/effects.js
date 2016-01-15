@@ -1,24 +1,32 @@
-$(document).ready(function() {
-	var urlstring = window.location.href;
+$(document).ready(function () {
 
-	urlstring = urlstring.split("/");
-	urlstring = urlstring.pop();
+    setTimeout(function () {
 
-	if(sessionStorage.getItem(urlstring) != "true") {
-		$(".background").fadeIn(1000);
-		$(".fade").hide().delay(500).fadeIn(1000);
-		$(".fade2").hide().delay(2000).fadeIn(1000);
-		sessionStorage.setItem(urlstring, "true");
-	}
-	else {
-		$(".background").show();
-	}
+        $(".animsition").animsition({
+
+            inClass: 'fade-in-up-sm',
+            outClass: 'fade-out-up-sm',
+            inDuration: 2000,
+            outDuration: 800,
+            linkElement: '.animsition-link',
+            // e.g. linkElement   :   'a:not([target="_blank"]):not([href^=#])'
+            loading: false,
+            loadingParentElement: 'body', //animsition wrapper element
+            loadingClass: 'animsition-loading',
+            unSupportCss: ['animation-duration',
+                              '-webkit-animation-duration',
+                              '-o-animation-duration'
+                            ],
+            //"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+            //The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+
+            overlay: false,
+
+            overlayClass: 'animsition-overlay-slide',
+            overlayParentElement: 'body'
+        });
+
+    }, 1000);
+
 });
 
-// $(document).ready(function() {
-//    $(".fade").hide(0).delay(1000).fadeIn(1000);
-// });
-
-// $(document).ready(function() {
-//    $(".fade2").hide(0).delay(2000).fadeIn(1000);
-// });
