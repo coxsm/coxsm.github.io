@@ -36,14 +36,6 @@ h3 {
     font-family: 'Montserrat', sans-serif;
 }
 
-
-/*
-p, li {
-    color: #fff;
-    font-family: 'Lato', sans-serif;
-}
-*/
-
 p {
     font-weight: 400;
     font-size: 16px;
@@ -108,7 +100,6 @@ a:after {
 .site-button-dual {
     float: left;
     display: inline-block;
-    /*    position: relative;*/
     vertical-align: top;
     width: 48%;
     padding: 25px 50px;
@@ -144,16 +135,12 @@ a:after {
 }
 
 
-/*IMPORTANT NAVBAR FIX w/ MODAL*/
 
-body.modal-open {
-    overflow: inherit;
-    padding-right: 0 !important;
-}
 
-body.modal-open {
-    overflow: hidden;
-}
+
+
+
+
 
 
 /* Intro Section */
@@ -225,6 +212,21 @@ hr.bolt-light:after {
     color: #fff;
     background-color: #1abc9c;
 }
+
+/*IMPORTANT NAVBAR FIX w/ MODAL*/
+
+body.modal-open {
+    overflow: inherit;
+    padding-right: 0 !important;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+
+
 
 
 /* Projects Section */
@@ -298,6 +300,9 @@ hr.bolt-light:after {
 }
 
 
+
+
+
 /* About Section */
 
 .about-section {
@@ -320,29 +325,6 @@ hr.bolt-light:after {
     padding-top: 9px;
 }
 
-/*
-.ps {
-    display: block;
-    background-image: url(../images/ps.png);
-    height: 32px;
-    width: 32px;
-}
-
-.ai {
-    display: block;
-    background-image: url(../images/ai.png);
-    height: 32px;
-    width: 32px;
-}
-
-.id {
-    display: block;
-    background-image: url(../images/id.png);
-    height: 32px;
-    width: 32px;
-}
-*/
-
 .list-inline > li {
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
@@ -351,6 +333,12 @@ hr.bolt-light:after {
     color: #0f8971;
     display: inline-block;
 }
+
+
+
+
+
+
 
 
 /* Contact Section */
@@ -375,11 +363,9 @@ section#contact .form-group input.form-control {
     height: auto;
 }
 
-/*
 section#contact .form-group textarea.form-control {
-    height: 236px;
+    height: 200px;
 }
-*/
 
 section#contact .text-danger {
     color: #e74c3c;
