@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A quick way to track dynamic stats in D&D. v1.0">
+    <meta name="author" content="Stephen Cox">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Cantrip</title>
+
+    <!-- CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="css/rangeslider.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+
+    <!-- JS -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/UI.js"></script>
+    <script type="text/javascript" src="js/rangeslider.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+
+
+
+
+
+        <!-- Top Section --------------------->
+        
+
+
+        <div class="hp-grid col-md-12">
+
+            <div class="card">
+                <i class="fa fa-heart"></i>
+                <h3>Hit Points</h3>
+
+                <div class="col-xs-12" style="padding-top:10px;padding-bottom:10px">
+                    <input type="range" value="4" min="0" max="5" step="1" data-rangeslider>
+                </div>
+
+
+                <div class="col-xs-4 col-xs-offset-2">
+                    <h4>Current</h4>
+                    <output></output>
+                </div>
+
+
+                <div class="hp-grid-number-input col-xs-4">
+                    <h4>Maximum</h4>
+                    <input type="number" name="max" value="5">
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="init-grid col-xs-6">
+            <div class="card">
+                <i class="fa fa-list"></i>
+                <a><h3>Initiative</h3></a>
+
+                <div class="clear"></div>
+
+                <form class="col-sm-6 col-sm-offset-3">
+                    <input id="init" type="number" value="20" min="1" max="20">
+                </form>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="ac-grid col-xs-6">
+            <div class="card">
+                <i class="fa fa-shield"></i>
+                <h3>Armor Class</h3>
+
+                <div class="clear"></div>
+
+                <form class="col-sm-6 col-sm-offset-3">
+                    <input id="ac" type="number" value="10" min="-999" max="999">
+                </form>
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="clear" style="padding-bottom:10px;"></div>
+
+
+
+        <!-- Bottom Section --------------------->
+
+
+        <div class="stat-grid col-md-2 col-xs-4">
+            <h3>CON</h3>
+            <input id="con" type="number" value="0" min="-999" max="999">
+        </div>
+
+
+        <div class="stat-grid col-md-2 col-xs-4">
+            <h3>DEX</h3>
+            <input id="dex" type="number" value="0" min="-999" max="999">
+        </div>
+
+
+        <div class="stat-grid col-md-2 col-xs-4">
+            <h3>STR</h3>
+            <input id="str" type="number" value="0" min="-999" max="999">
+        </div>
+
+
+        <div class="stat-grid col-md-2 col-xs-4">
+            <h3>WIS</h3>
+            <input id="wis" type="number" value="0" min="-999" max="999">
+        </div>
+
+        <div class="stat-grid col-md-2 col-xs-4">
+            <h3>INT</h3>
+            <input id="int" type="number" value="0" min="-999" max="999">
+        </div>
+
+        <div class="stat-grid col-md-2 col-xs-4">
+            <h3>CHR</h3>
+            <input id="chr" type="number" value="0" min="-999" max="999">
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- /.container -->
+
+
+
+
+    <script>
+        $(function () {
+            var $document = $(document);
+            var $r = $('input[type=range]');
+            var $max = $('input[name="max"]');
+            var output = document.querySelectorAll('output')[0];
+
+            // set initial output value
+            output.innerHTML = $r[0].value;
+
+            // update output value
+            $document.on('input', 'input[type="range"]', function (e) {
+                output.innerHTML = e.currentTarget.value;
+            });
+
+            // Initialize
+            $r.rangeslider({
+                polyfill: false
+            });
+
+            // Functionality to demonstrate programmatic attribute changes
+            $document.on('focusout', '.hp-grid-number-input', function (e) {
+                var attributes = {
+                    max: $max[0].value
+                };
+
+
+                $r.attr(attributes);
+                $r.rangeslider('update', true);
+            });
+
+
+
+        });
+
+
+        $("input").blur(function () {
+            if ($(this).val() == '') {
+                $(this).val(this.defaultValue);
+            }
+        });
+
+
+        $("input").on("click", function () {
+            $(this).select();
+        });
+
+
+        $(".init-grid").find("a").on("click", function () {
+            var min = 1;
+            var max = 20;
+
+            rnd(min, max);
+
+            function rnd(min, max) {
+                var randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+                $("#init").val(randomNumber);
+
+            }
+        });
+    </script>
+
+</body>
+
+</html>
