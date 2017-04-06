@@ -1,0 +1,299 @@
+/*
+
+SCHEME 1 --------------
+    teal        #1bc4a3;
+    dark teal   #057862;
+    gray        #292525; 
+    text-gray   #545151;
+    white       #ffffff;
+
+SCHEME 2 --------------
+    lite-gray1  #eeeeee;
+    dark-gray1  #161B20;
+    dark-gray2  #101418;
+    dark-gray3  #101418;
+
+*/
+
+
+/*General Section =====================================*/
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+body {
+    font-family: 'Lato', sans-serif;
+    background: #1B2127;
+    color: #eee;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr{
+    border: 1px solid #909090;
+    opacity: .4;
+}
+/*Navigation Section =================================*/
+
+.navbar-default .navbar-nav>li>a {
+    color: #eee;
+    opacity: .65;
+}
+
+.navbar-default .navbar-nav>li>a:focus {
+    color: #eee;
+    opacity: .65;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: whitesmoke;
+    opacity: 1;
+}
+
+
+
+.navbar-default .navbar-brand {
+    color: #eee;
+    opacity: .65;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: whitesmoke;
+    opacity: 1;
+}
+
+.navbar-brand {
+    float: left;
+    height: 80px;
+    padding: 30px 15px;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.navbar-default {
+    height: 80px;
+    background: #1B2127;
+    border: 0;
+}
+
+.navbar-nav > li > a {
+    font-size: 14px;
+    /*font-weight: 400;*/
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.navbar-nav>li>a>i{
+    display: inline-flex;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        transition: background .5s ease-in-out, padding .5s ease-in-out;
+    }
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+
+.navbar-toggle {
+	margin-top: 22px;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #e7e7e7;
+    background: #1B2127;
+}
+
+
+/*Landing Section ======================================*/
+
+.jumbotron {
+    background: #1B2127;
+    /*background: #000;*/
+    background: url("../images/waves.png");
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 0;
+    padding: 70px 0 200px 0;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.jumbotron p {
+    font-size: 11px;
+    margin: 10px 0;
+    opacity: .7;
+}
+
+@media screen and (min-width: 768px) {
+    .jumbotron .h1,
+    .jumbotron h1 {
+        font-size: 50px;
+    }
+}
+
+.shroud-logo img {
+    height: 100px;
+    /*    width: 100%;*/
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn.focus,
+.btn:focus,
+.btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.download-btn {
+    background: #1bc4a3;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    color: #fff;
+    padding: 5px 45px;
+    border-radius: 0;
+    margin-top: 50px;
+}
+
+button.download-btn:hover {
+    background: #057862;
+    color: #fff;
+}
+
+.download-btn i {
+    height: 50px;
+    margin-right: 10px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+
+/*Features Section ======================================*/
+
+#features {
+    background: #161B20;
+    height: 100%;
+    text-align: center;
+}
+
+
+
+.screenshot-main {
+    display: block;
+    width: 700px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.22);
+    margin: 0 auto;
+    transform: translateY(-70px);
+}
+
+.screenshot-main img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 700px){
+    .screenshot-main{
+        width: 100%;
+    }
+}
+
+.feature-item {
+    height: 250px;
+    padding: 25px;
+}
+
+.feature-item i {
+    font-size: 35px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: #057862;
+    border-radius: 50%;
+    cursor: default;
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+}
+
+
+.feature-item p {
+    color: #909090;
+}
+
+#features-scroll {
+	padding-top: 80px;
+    transform: translateY(-80px);
+}
+
+/*Releases Section ======================================*/
+
+
+#releases{
+    background: #101418;
+    height: 100%;
+    padding: 40px 0;
+}
+
+.section-headline{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.release-update{
+    text-align: left;
+    padding: 40px 0;
+}
+
+.release-update ul{
+    color: #909090;
+}
+
+.release-title p, .release-title i{ 
+    font-size: 16px;
+    line-height: 16px;
+    display: inline-flex;
+    padding: 0 0 0 10px;
+    vertical-align: middle;
+    margin: 0 0 10px;
+    
+}
+
+.pull-right p{
+	margin-top: 10px;
+}
+
+.release-title a, .release-title a:hover{
+	text-decoration: none;
+    color: #909090;
+    cursor: pointer;
+}
+
+.release-title a:hover{
+    color: whitesmoke;
+}
+
+
+.release-number{
+    display: inline;
+    border: 1px solid #057862;
+    border-radius: 3px;
+    font-size: 24px;
+    padding: 10px;
+    color: #1bc4a3;
+}
+
+
