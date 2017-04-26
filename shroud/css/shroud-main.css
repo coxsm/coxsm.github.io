@@ -148,6 +148,12 @@ hr{
     background-position: center;
 }
 
+.navbar-brand img{
+    display: inline;
+    height: 30px;
+    padding-right: 15px;
+}
+
 .btn.focus,
 .btn:focus,
 .btn:hover {
@@ -190,11 +196,16 @@ button.download-btn:hover {
 
 
 .screenshot-main {
+    cursor: pointer;
     display: block;
     width: 700px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.22);
     margin: 0 auto;
     transform: translateY(-70px);
+}
+
+.screenshot-main:hover{
+    opacity: .8;
 }
 
 .screenshot-main img {
@@ -214,10 +225,11 @@ button.download-btn:hover {
 }
 
 .feature-item i {
+    
     font-size: 35px;
-    padding: 20px;
+/*    padding: 20px;*/
     margin-bottom: 15px;
-    background: #057862;
+    
     border-radius: 50%;
     cursor: default;
     -webkit-user-select: none;
@@ -229,6 +241,20 @@ button.download-btn:hover {
     user-select: none;
 }
 
+
+.feature-item img {
+    z-index: -999;
+    position: absolute;
+    left: 40%;
+    width: 75px;
+    top: 0px;
+}
+
+@media screen and (max-width: 900px){
+    .feature-item img {
+    left: 34%;
+    }
+}
 
 .feature-item p {
     color: #909090;
