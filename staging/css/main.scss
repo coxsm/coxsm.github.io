@@ -87,7 +87,61 @@ section{
 
 
 
-// Navigaqtion -----------------------------------------------------
+// Morph Blob -----------------------------------------------------
+svg,
+svg circle {
+  fill: $color-primary-darker;
+}
+
+@keyframes from0to360 {
+  from{transform:rotate(0);}
+  to{transform:rotate(360deg);}
+}
+
+#Circle1 {
+  animation: from0to360 4s linear infinite;
+  cx: 150;
+  cy: 145;
+  r: 100;
+  transform-origin: 145px 150px;
+}
+
+@keyframes from360to0 {
+  from{transform:rotate(360deg);}
+  to{transform:rotate(0deg);}
+}
+
+#Circle2 {
+  animation: from360to0 7s linear infinite;
+  cx: 150;
+  cy: 155;
+  r: 100;
+  transform-origin: 170px 150px;
+}
+
+#Circle3 {
+  animation: from0to360 5s linear infinite;
+  cx: 145;
+  cy: 150;
+  r: 100;
+  transform-origin: 140px 145px;
+}
+
+#Circle4 {
+  animation: from360to0 4s linear infinite;
+  cx: 155;
+  cy: 150;
+  r: 100;
+  transform-origin: 150px 155px;
+}
+
+.morph-wrap {
+	position: absolute;
+	top:0;
+	left: 0;
+  z-index: -1;
+  height: 100vh;
+}
 
 
 
@@ -110,21 +164,7 @@ section{
   background: $color-white;
 }
 
-.morph-wrap {
-	position: fixed;
-	top: -300px;
-	left: 0;
-  z-index: -1;
-  min-height: 600px;
-  height: 100vh;
-}
 
-.morph {
-	position: relative;
-	height: 100%;
-	fill: $color-primary-darker;
-	flex: none;
-}
 
 
 

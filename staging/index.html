@@ -39,7 +39,7 @@
 
 <body>
 
-   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+   <nav class="navbar navbar-expand-md navbar-dark fixed-top">
      <div class="container">
         <a class="navbar-brand" href="#">Stephen Cox</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNav" aria-controls="topNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,8 +67,23 @@
 
    <div class="jumbotron">
       <div class="morph-wrap">
-          <svg class="morph" width="1400" height="600" viewBox="0 0 1400 600">
+          <!-- <svg class="morph" width="1400" height="600" viewBox="0 0 1400 600">
             <path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
+          </svg> -->
+
+          <svg id="organic-blob" width="100%" height="200" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" filter="url(#goo)">
+            <defs>
+              <filter id="goo">
+                <!-- tympanus.net/codrops/creative-gooey-effects -->
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+              </filter>
+            </defs>
+            <circle id="Circle1"></circle>
+            <circle id="Circle2"></circle>
+            <circle id="Circle3"></circle>
+            <circle id="Circle4"></circle>
           </svg>
         </div>
       <div class="container">
