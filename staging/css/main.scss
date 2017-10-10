@@ -2,7 +2,8 @@
 
 $font-body-color: #333;
 
-$color-primary: #371D88;
+$color-primary: #363dc2;
+$color-primary-darker: #282faf;
 $color-light-gray: #F2F2F2;
 $color-dark-gray: #363636;
 $color-white: #fff;
@@ -16,8 +17,15 @@ $font-size: 17px;
 
 //Basic ---------------------------------------------------
 
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 html{
-   background: $color-white;
+   
    font-family: 'Open Sans', sans-serif;
    font-size: $font-size;
    position: relative;
@@ -28,6 +36,7 @@ html{
 
 body{
    padding-bottom: $footer-height;
+   background: $color-primary;
 }
 
 
@@ -84,8 +93,11 @@ section{
 
 // Main Page CSS ---------------------------------------------------
 
+
+
 .jumbotron{
   padding: 8em 2em;
+  background: transparent;
   color: $color-white;
 
   .social-links{
@@ -94,10 +106,33 @@ section{
 
 }
 
+#skills{
+  background: $color-white;
+}
+
+.morph-wrap {
+	position: fixed;
+	top: -300px;
+	left: 0;
+  z-index: -1;
+  min-height: 600px;
+  height: 100vh;
+}
+
+.morph {
+	position: relative;
+	height: 100%;
+	fill: $color-primary-darker;
+	flex: none;
+}
+
+
+
+
 .profile-img{
   width: 140px;
   height: 140px;
-  margin: -140px auto $spacing auto;
+  margin: -105px auto $spacing auto;
 
   img{
     border-radius: 50%;
@@ -106,11 +141,11 @@ section{
 }
 
 .block{
-  height: 150px;
   margin-bottom: $spacing-less;
 
   .block-icon{
     font-size: 40px;
+    color: $color-primary-darker;
   }
 
 }
