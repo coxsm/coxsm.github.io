@@ -1,0 +1,89 @@
+html {
+  background: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  padding-bottom: 60px;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Inconsolata', monospace;
+}
+
+h1, .h1 {
+  font-size: 48px;
+  line-height: 56px;
+}
+
+h2, .h2 {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+h3, .h3 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+h4, .h4 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h5, .h5 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h6, .h6 {
+  font-size: 20px;
+}
+
+section {
+  padding: 36px 0;
+}
+
+.jumbotron {
+  padding: 8em 2em;
+  color: #fff;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  margin: -140px auto 36px auto;
+}
+
+.profile-img img {
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.block {
+  height: 150px;
+  margin-bottom: 16px;
+}
+
+.block .block-icon {
+  font-size: 40px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px;
+  /* Vertically center the text there */
+  background-color: #363636;
+}

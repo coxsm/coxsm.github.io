@@ -1,0 +1,130 @@
+//Variables -----------------------------------------------
+
+$font-body-color: #333;
+
+$color-primary: #371D88;
+$color-light-gray: #F2F2F2;
+$color-dark-gray: #363636;
+$color-white: #fff;
+$color-black: #000;
+
+$spacing: 36px;
+$spacing-less: 16px;
+$footer-height: 60px;
+$font-size: 17px;
+
+
+//Basic ---------------------------------------------------
+
+html{
+   background: $color-white;
+   font-family: 'Open Sans', sans-serif;
+   font-size: $font-size;
+   position: relative;
+   min-height: 100%;
+   
+}
+
+
+body{
+   padding-bottom: $footer-height;
+}
+
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6{
+  font-family: 'Inconsolata', monospace;
+}
+
+h1, .h1{
+  font-size: 48px;
+  line-height: 56px;
+}
+
+h2, .h2{
+  font-size: 40px;
+  line-height: 48px;
+
+}
+
+h3, .h3{
+  font-size: 32px;
+  line-height: 40px;
+}
+
+h4, .h4{
+  font-size:24px;
+  line-height: 32px;
+}
+
+h5, .h5{
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h6, .h6{
+  font-size: 20px;
+}
+
+section{
+  padding: $spacing 0;
+}
+
+
+
+
+
+// Navigaqtion -----------------------------------------------------
+
+
+
+// Main Page CSS ---------------------------------------------------
+
+.jumbotron{
+  padding: 8em 2em;
+  color: $color-white;
+
+  .social-links{
+    
+  }
+
+}
+
+.profile-img{
+  width: 140px;
+  height: 140px;
+  margin: -140px auto $spacing auto;
+
+  img{
+    border-radius: 50%;
+    border: 3px solid $color-white;
+  }
+}
+
+.block{
+  height: 150px;
+  margin-bottom: $spacing-less;
+
+  .block-icon{
+    font-size: 40px;
+  }
+
+}
+
+
+
+//Navbar & Footer -----------------------------------------
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: $footer-height;
+  line-height: $footer-height; /* Vertically center the text there */
+  background-color: $color-dark-gray;
+}
