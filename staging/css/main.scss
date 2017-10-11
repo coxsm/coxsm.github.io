@@ -78,6 +78,14 @@ section{
   }
 }
 
+.main-cta{
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  -webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
 .shadow{
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
@@ -181,7 +189,44 @@ section{
 
 
 
-// Morph Blob -----------------------------------------------------
+
+
+
+//Media queries ------------------------------------------------
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+  
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .btn-primary{
+    width: auto;
+    margin-top: 0;
+  }
+
+  .jumbotron{
+    padding: 10em 2em 8em 2em;
+    text-align: left;
+  }
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+
+
+
+// Animations & Morph Blob -----------------------------------------------------
 svg,
 svg circle {
   fill: $color-primary-darker;
@@ -241,34 +286,15 @@ svg circle {
   height: 100vh;
 }
 
-
-//Meida queries ------------------------------------------------
-
-/* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
-  
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-  .btn-primary{
-    width: auto;
-    margin-top: 0;
+@keyframes slideInFromLeft {
+  0% {
+      transform: translateX(-10%);
+      opacity: 0;
   }
 
-  .jumbotron{
-    padding: 10em 2em 8em 2em;
-    text-align: left;
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
   }
-}
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-  
-}
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-
 }
