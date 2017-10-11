@@ -26,42 +26,107 @@ h6, .h6 {
   font-family: 'Inconsolata', monospace;
 }
 
-h1, .h1 {
-  font-size: 48px;
-  line-height: 56px;
-}
-
-h2, .h2 {
-  font-size: 40px;
-  line-height: 48px;
-}
-
-h3, .h3 {
-  font-size: 32px;
-  line-height: 40px;
-}
-
-h4, .h4 {
-  font-size: 24px;
-  line-height: 32px;
-}
-
-h5, .h5 {
-  font-size: 20px;
-  line-height: 24px;
-}
-
-h6, .h6 {
-  font-size: 20px;
-}
-
 section {
   padding: 36px 0;
+}
+
+.btn-primary {
+  background: #29b6f6;
+  border: 0;
+  cursor: pointer;
+  padding: 16px;
+  margin-top: 36px;
+  border-radius: 100px;
+  width: 100%;
+}
+
+.shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.shadow:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.23);
+}
+
+.shadow-no-hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.jumbotron {
+  padding: 8em 2em 4em 2em;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+}
+
+.jumbotron .is-flex {
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron svg {
+  margin-left: 8px;
+}
+
+#skills {
+  background: #fff;
+}
+
+#skills .backstory p {
+  font-size: 18px;
+}
+
+#skills .backstory .social-links ul {
+  list-style: none;
+}
+
+#skills .backstory .social-links ul li {
+  display: inline-block;
+}
+
+#skills .backstory .social-links ul li a {
+  font-size: 40px;
+  color: #29b6f6;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  margin: -105px auto 36px auto;
+}
+
+.profile-img img {
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.block {
+  margin-bottom: 16px;
+}
+
+.block .block-icon {
+  font-size: 40px;
+  color: #282faf;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px;
+  /* Vertically center the text there */
+  background-color: #363636;
 }
 
 svg,
 svg circle {
   fill: #282faf;
+}
+
+#the-blob {
+  margin-left: -18px;
 }
 
 @keyframes from0to360 {
@@ -109,7 +174,7 @@ svg circle {
 #Circle4 {
   animation: from360to0 4s linear infinite;
   cx: 155;
-  cy: 150;
+  cy: 140;
   r: 100;
   transform-origin: 150px 155px;
 }
@@ -122,43 +187,18 @@ svg circle {
   height: 100vh;
 }
 
-.jumbotron {
-  padding: 8em 2em;
-  background: transparent;
-  color: #fff;
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .btn-primary {
+    width: auto;
+    margin-top: 0;
+  }
+  .jumbotron {
+    padding: 10em 2em 8em 2em;
+    text-align: left;
+  }
 }
 
-#skills {
-  background: #fff;
-}
-
-.profile-img {
-  width: 140px;
-  height: 140px;
-  margin: -105px auto 36px auto;
-}
-
-.profile-img img {
-  border-radius: 50%;
-  border: 3px solid #fff;
-}
-
-.block {
-  margin-bottom: 16px;
-}
-
-.block .block-icon {
-  font-size: 40px;
-  color: #282faf;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px;
-  /* Vertically center the text there */
-  background-color: #363636;
-}
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
