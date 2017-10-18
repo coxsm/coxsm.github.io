@@ -57,7 +57,7 @@ section{
 }
 
 .btn-primary{
-  background: $color-accent;
+  background: $color-primary-darker;
   border: 0;
   cursor: pointer;
   padding: $spacing-less;
@@ -66,6 +66,10 @@ section{
   width: 100%;
   font-family: 'Ubuntu', sans-serif;
   
+  svg{
+    margin-left: 8px;
+  }
+
   &:hover{
 
   }
@@ -82,8 +86,8 @@ section{
 
 .main-cta{
   animation: 1s ease-out 0s 1 slideInFromLeft;
-  -webkit-animation-delay: .5s; /* Safari 4.0 - 8.0 */
-  animation-delay: .5s;
+  -webkit-animation-delay: .6s; /* Safari 4.0 - 8.0 */
+  animation-delay: .6s;
   animation-fill-mode: forwards;
   visibility: hidden;
 }
@@ -99,6 +103,7 @@ section{
 .shadow-no-hover{
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+
 
 
 
@@ -229,7 +234,7 @@ section{
   }
 
   .jumbotron{
-    padding: 10em 2em 8em 2em;
+    padding: 4em 0 4em 0;
     // text-align: left;
 
     .morph-wrap{

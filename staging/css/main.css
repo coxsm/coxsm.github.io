@@ -31,7 +31,7 @@ section {
 }
 
 .btn-primary {
-  background: #29b6f6;
+  background: #282faf;
   border: 0;
   cursor: pointer;
   padding: 16px;
@@ -41,11 +41,15 @@ section {
   font-family: 'Ubuntu', sans-serif;
 }
 
+.btn-primary svg {
+  margin-left: 8px;
+}
+
 .main-cta {
   animation: 1s ease-out 0s 1 slideInFromLeft;
-  -webkit-animation-delay: .5s;
+  -webkit-animation-delay: .6s;
   /* Safari 4.0 - 8.0 */
-  animation-delay: .5s;
+  animation-delay: .6s;
   animation-fill-mode: forwards;
   visibility: hidden;
 }
@@ -157,7 +161,7 @@ section {
     margin-top: 0;
   }
   .jumbotron {
-    padding: 10em 2em 8em 2em;
+    padding: 4em 0 4em 0;
   }
   .jumbotron .morph-wrap #the-blob {
     margin-left: -53%;
