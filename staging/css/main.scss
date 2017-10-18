@@ -3,10 +3,11 @@
 $font-body-color: #333;
 
 $color-primary: #363dc2;
+$color-primary-lighter: lighten($color-primary, 10%);
 $color-primary-darker: #282faf;
 $color-accent: #29b6f6;
 $color-light-gray: #F2F2F2;
-$color-dark-gray: #363636;
+$color-dark-gray: #151515;
 $color-white: #fff;
 $color-black: #000;
 
@@ -26,7 +27,7 @@ $font-size: 17px;
 }
 
 html{
-   
+   overflow-x: hidden;
    font-family: 'Open Sans', sans-serif;
    font-size: $font-size;
    position: relative;
@@ -45,9 +46,9 @@ h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4,
-h5, .h5,
-h6, .h6{
-  font-family: 'Inconsolata', monospace;
+h5, .h5{
+  font-family: 'Ubuntu', sans-serif;
+  
 }
 
 
@@ -63,6 +64,7 @@ section{
   margin-top: $spacing;
   border-radius: 100px;
   width: 100%;
+  font-family: 'Ubuntu', sans-serif;
   
   &:hover{
 
@@ -106,7 +108,7 @@ section{
 
 
 .jumbotron{
-  padding: 8em 2em 4em 2em;
+  padding: 6em 2em 10em 2em;
   background: transparent;
   color: $color-white;
   text-align: center;
@@ -115,11 +117,23 @@ section{
     display: flex;
     align-items: center;
 
+    p.subtext{
+      font-size: 20px;
+      opacity: .8;
+
+      svg{
+        font-size: 6px;
+        vertical-align: middle;
+        margin: 0 10px;
+        
+      }
+    }
     
   }
 
-  svg{
-    margin-left: 8px;
+  #the-blob{
+    margin-left: -5px;
+    margin-top:250px;
   }
 }
 
@@ -134,15 +148,18 @@ section{
     }
 
     .social-links{
+
       ul{
         list-style: none;
+        padding: 0;
 
         li{
           display: inline-block;
           
           a{
-            font-size: 40px;
+            font-size: 30px;
             color: $color-accent;
+            margin: 0 4px;
           }
 
         }
@@ -165,10 +182,15 @@ section{
 
 .block{
   margin-bottom: $spacing-less;
+  text-align: center;
 
   .block-icon{
     font-size: 40px;
     color: $color-primary-darker;
+  }
+
+  p{
+    text-align: left;
   }
 
 }
@@ -208,7 +230,14 @@ section{
 
   .jumbotron{
     padding: 10em 2em 8em 2em;
-    text-align: left;
+    // text-align: left;
+
+    .morph-wrap{
+      #the-blob{
+        margin-left: -53%;
+        margin-top: 0;
+      }
+    }
   }
 }
 
@@ -232,51 +261,77 @@ svg circle {
   fill: $color-primary-darker;
 }
 
-#the-blob{
-  margin-left: -18px;
-}
+
 
 @keyframes from0to360 {
   from{transform:rotate(0);}
   to{transform:rotate(360deg);}
 }
 
-#Circle1 {
-  animation: from0to360 4s linear infinite;
-  cx: 150;
-  cy: 145;
-  r: 100;
-  transform-origin: 145px 150px;
-}
+
 
 @keyframes from360to0 {
   from{transform:rotate(360deg);}
   to{transform:rotate(0deg);}
 }
-
-#Circle2 {
-  animation: from360to0 7s linear infinite;
+#Circle1 {
+  animation: from0to360 4s linear infinite;
   cx: 150;
   cy: 155;
-  r: 100;
-  transform-origin: 170px 150px;
+  r: 95;
+  transform-origin: 150px 150px;
 }
 
-#Circle3 {
-  animation: from0to360 5s linear infinite;
-  cx: 145;
-  cy: 150;
-  r: 100;
-  transform-origin: 140px 145px;
-}
-
-#Circle4 {
+#Circle2 {
   animation: from360to0 4s linear infinite;
   cx: 155;
   cy: 140;
   r: 100;
-  transform-origin: 150px 155px;
+  transform-origin: 150px 145px;
 }
+
+#Circle3 {
+  animation: from0to360 3s linear infinite;
+  cx: 145;
+  cy: 150;
+  r: 90;
+  transform-origin: 150px 150px;
+}
+
+#Circle4 {
+  animation: from0to360 5s linear infinite;
+  cx: 50;
+  cy: 100;
+  r: 5;
+  transform-origin: 120px 100px;
+}
+
+#Circle5 {
+  animation: from360to0 7s linear infinite;
+  cx: 10;
+  cy: 140;
+  r: 7;
+  transform-origin: 135px 100px;
+}
+
+#Circle6 {
+  animation: from0to360 4s linear infinite;
+  cx: 50;
+  cy: 100;
+  r: 4;
+  transform-origin: 120px 100px;
+}
+
+#Circle7 {
+  animation: from360to0 3s linear infinite;
+  cx: 90;
+  cy: 100;
+  r: 14;
+  transform-origin: 135px 90px;
+}
+
+
+
 
 .morph-wrap {
 	position: absolute;

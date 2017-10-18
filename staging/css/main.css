@@ -6,6 +6,7 @@
 }
 
 html {
+  overflow-x: hidden;
   font-family: 'Open Sans', sans-serif;
   font-size: 17px;
   position: relative;
@@ -21,9 +22,8 @@ h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4,
-h5, .h5,
-h6, .h6 {
-  font-family: 'Inconsolata', monospace;
+h5, .h5 {
+  font-family: 'Ubuntu', sans-serif;
 }
 
 section {
@@ -38,6 +38,7 @@ section {
   margin-top: 36px;
   border-radius: 100px;
   width: 100%;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .main-cta {
@@ -62,7 +63,7 @@ section {
 }
 
 .jumbotron {
-  padding: 8em 2em 4em 2em;
+  padding: 6em 2em 10em 2em;
   background: transparent;
   color: #fff;
   text-align: center;
@@ -73,8 +74,20 @@ section {
   align-items: center;
 }
 
-.jumbotron svg {
-  margin-left: 8px;
+.jumbotron .is-flex p.subtext {
+  font-size: 20px;
+  opacity: .8;
+}
+
+.jumbotron .is-flex p.subtext svg {
+  font-size: 6px;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+.jumbotron #the-blob {
+  margin-left: -5px;
+  margin-top: 250px;
 }
 
 #skills {
@@ -87,6 +100,7 @@ section {
 
 #skills .backstory .social-links ul {
   list-style: none;
+  padding: 0;
 }
 
 #skills .backstory .social-links ul li {
@@ -94,8 +108,9 @@ section {
 }
 
 #skills .backstory .social-links ul li a {
-  font-size: 40px;
+  font-size: 30px;
   color: #29b6f6;
+  margin: 0 4px;
 }
 
 .profile-img {
@@ -111,11 +126,16 @@ section {
 
 .block {
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .block .block-icon {
   font-size: 40px;
   color: #282faf;
+}
+
+.block p {
+  text-align: left;
 }
 
 .footer {
@@ -126,7 +146,7 @@ section {
   height: 60px;
   line-height: 60px;
   /* Vertically center the text there */
-  background-color: #363636;
+  background-color: #151515;
 }
 
 /* Extra Small Devices, Phones */
@@ -138,7 +158,10 @@ section {
   }
   .jumbotron {
     padding: 10em 2em 8em 2em;
-    text-align: left;
+  }
+  .jumbotron .morph-wrap #the-blob {
+    margin-left: -53%;
+    margin-top: 0;
   }
 }
 
@@ -147,10 +170,6 @@ section {
 svg,
 svg circle {
   fill: #282faf;
-}
-
-#the-blob {
-  margin-left: -18px;
 }
 
 @keyframes from0to360 {
@@ -162,14 +181,6 @@ svg circle {
   }
 }
 
-#Circle1 {
-  animation: from0to360 4s linear infinite;
-  cx: 150;
-  cy: 145;
-  r: 100;
-  transform-origin: 145px 150px;
-}
-
 @keyframes from360to0 {
   from {
     transform: rotate(360deg);
@@ -179,28 +190,60 @@ svg circle {
   }
 }
 
-#Circle2 {
-  animation: from360to0 7s linear infinite;
+#Circle1 {
+  animation: from0to360 4s linear infinite;
   cx: 150;
   cy: 155;
-  r: 100;
-  transform-origin: 170px 150px;
+  r: 95;
+  transform-origin: 150px 150px;
 }
 
-#Circle3 {
-  animation: from0to360 5s linear infinite;
-  cx: 145;
-  cy: 150;
-  r: 100;
-  transform-origin: 140px 145px;
-}
-
-#Circle4 {
+#Circle2 {
   animation: from360to0 4s linear infinite;
   cx: 155;
   cy: 140;
   r: 100;
-  transform-origin: 150px 155px;
+  transform-origin: 150px 145px;
+}
+
+#Circle3 {
+  animation: from0to360 3s linear infinite;
+  cx: 145;
+  cy: 150;
+  r: 90;
+  transform-origin: 150px 150px;
+}
+
+#Circle4 {
+  animation: from0to360 5s linear infinite;
+  cx: 50;
+  cy: 100;
+  r: 5;
+  transform-origin: 120px 100px;
+}
+
+#Circle5 {
+  animation: from360to0 7s linear infinite;
+  cx: 10;
+  cy: 140;
+  r: 7;
+  transform-origin: 135px 100px;
+}
+
+#Circle6 {
+  animation: from0to360 4s linear infinite;
+  cx: 50;
+  cy: 100;
+  r: 4;
+  transform-origin: 120px 100px;
+}
+
+#Circle7 {
+  animation: from360to0 3s linear infinite;
+  cx: 90;
+  cy: 100;
+  r: 14;
+  transform-origin: 135px 90px;
 }
 
 .morph-wrap {
