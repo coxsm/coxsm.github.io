@@ -8,7 +8,7 @@
 html {
   overflow-x: hidden;
   font-family: 'Open Sans', sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   position: relative;
   min-height: 100%;
 }
@@ -34,7 +34,7 @@ section {
   background: #282faf;
   border: 0;
   cursor: pointer;
-  padding: 16px;
+  padding: 8px;
   margin-top: 36px;
   border-radius: 100px;
   width: 100%;
@@ -43,6 +43,14 @@ section {
 
 .btn-primary svg {
   margin-left: 8px;
+}
+
+a {
+  color: #29b6f6;
+}
+
+a:hover {
+  color: #5a60d1;
 }
 
 .main-cta {
@@ -67,7 +75,7 @@ section {
 }
 
 .jumbotron {
-  padding: 6em 2em 10em 2em;
+  padding: 4em 0 10em 0;
   background: transparent;
   color: #fff;
   text-align: center;
@@ -78,9 +86,14 @@ section {
   align-items: center;
 }
 
+.jumbotron .is-flex h1 {
+  font-size: 63px;
+  font-weight: bolder;
+}
+
 .jumbotron .is-flex p.subtext {
   font-size: 20px;
-  opacity: .8;
+  color: #efefef;
 }
 
 .jumbotron .is-flex p.subtext svg {
@@ -90,16 +103,32 @@ section {
 }
 
 .jumbotron #the-blob {
-  margin-left: -5px;
-  margin-top: 250px;
+  margin-left: 0;
+  margin-top: 45%;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  margin: -140px auto 36px auto;
+}
+
+.profile-img img {
+  border-radius: 50%;
+  border: 4px solid #efefef;
 }
 
 #skills {
-  background: #fff;
+  background: #efefef;
+}
+
+#skills .backstory {
+  padding-bottom: 2em;
 }
 
 #skills .backstory p {
   font-size: 18px;
+  margin-bottom: 48px;
 }
 
 #skills .backstory .social-links ul {
@@ -112,34 +141,50 @@ section {
 }
 
 #skills .backstory .social-links ul li a {
-  font-size: 30px;
-  color: #29b6f6;
-  margin: 0 4px;
+  font-size: 16px;
+  color: #939393;
+  margin: 0 16px;
+  line-height: 32px;
+  transition: .3s;
 }
 
-.profile-img {
-  width: 140px;
-  height: 140px;
-  margin: -105px auto 36px auto;
+#skills .backstory .social-links ul li a svg {
+  font-size: 32px;
+  line-height: 32px;
+  vertical-align: bottom;
+  margin-right: 8px;
 }
 
-.profile-img img {
-  border-radius: 50%;
-  border: 3px solid #fff;
+#skills .backstory .social-links ul li a:hover {
+  color: #29b6f6 !important;
 }
 
 .block {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   text-align: center;
+  background: #fff;
+  border-right: 4px solid #efefef;
+  border-left: 4px solid #efefef;
+  padding: 36px;
 }
 
 .block .block-icon {
   font-size: 40px;
-  color: #282faf;
+  color: #efefef;
+  background: #29b6f6;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px auto;
+  border-radius: 50%;
+}
+
+.block .block-icon svg {
+  vertical-align: bottom;
 }
 
 .block p {
   text-align: left;
+  margin: 0;
 }
 
 .footer {
@@ -154,6 +199,16 @@ section {
 }
 
 /* Extra Small Devices, Phones */
+@media only screen and (min-width: 400px) {
+  .jumbotron {
+    padding: 6em 0 12em 0;
+  }
+  .jumbotron .morph-wrap #the-blob {
+    margin-left: 0;
+    margin-top: 38%;
+  }
+}
+
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
   .btn-primary {
@@ -161,11 +216,23 @@ section {
     margin-top: 0;
   }
   .jumbotron {
-    padding: 4em 0 4em 0;
+    padding: 6em 0 7em 0;
+  }
+  .jumbotron h1 {
+    font-size: 80px;
+    font-weight: bold;
   }
   .jumbotron .morph-wrap #the-blob {
-    margin-left: -53%;
     margin-top: 0;
+  }
+  .profile-img {
+    width: 280px;
+    height: 280px;
+    margin: -140px auto 36px auto;
+  }
+  .profile-img img {
+    border-radius: 50%;
+    border: 3px solid #fff;
   }
 }
 
