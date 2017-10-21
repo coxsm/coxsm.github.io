@@ -7,7 +7,7 @@
 
 html {
   overflow-x: hidden;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 18px;
   position: relative;
   min-height: 100%;
@@ -23,11 +23,37 @@ h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1, .h1 {
+  font-size: 63px;
+  font-weight: bolder;
+}
+
+h2, .h2 {
+  font-size: 44px;
+  font-weight: bolder;
 }
 
 section {
   padding: 36px 0;
+}
+
+nav.navbar a.navbar-brand img {
+  height: 80px;
+  width: auto;
+  opacity: .75;
+  transition: .2s;
+}
+
+nav.navbar a.navbar-brand img:hover {
+  opacity: 1;
+  transition: .2s;
+}
+
+nav.navbar .navbar-collapse ul.navbar-nav li.nav-item a.nav-link {
+  font-family: "Ubuntu", sans-serif;
 }
 
 .btn-primary {
@@ -46,7 +72,7 @@ section {
 }
 
 a {
-  color: #29b6f6;
+  color: #00bfa5;
 }
 
 a:hover {
@@ -156,7 +182,7 @@ a:hover {
 }
 
 #skills .backstory .social-links ul li a:hover {
-  color: #29b6f6 !important;
+  color: #00bfa5 !important;
 }
 
 .block {
@@ -171,7 +197,7 @@ a:hover {
 .block .block-icon {
   font-size: 40px;
   color: #efefef;
-  background: #29b6f6;
+  background: #00bfa5;
   width: 80px;
   height: 80px;
   margin: 0 auto 24px auto;
@@ -185,6 +211,11 @@ a:hover {
 .block p {
   text-align: left;
   margin: 0;
+}
+
+section#projects {
+  background: #282faf;
+  color: #fff;
 }
 
 .footer {
