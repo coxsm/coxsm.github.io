@@ -253,8 +253,7 @@ a:hover {
 }
 
 section#projects {
-  background-size: contain;
-  background-repeat: no-repeat;
+  background: #363dc2;
   color: #fff;
   display: flex;
   height: 100%;
@@ -296,7 +295,7 @@ footer {
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
   nav.navbar {
-    background: #363dc2;
+    background: transparent;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
     -o-transition: all .5s ease;

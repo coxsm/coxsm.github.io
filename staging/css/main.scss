@@ -360,8 +360,9 @@ a{
 
 section#projects{
   // background: $color-accent url('../img/trans-pattern.png') center top;
-  background-size: contain;
-  background-repeat: no-repeat;
+  // background-size: contain;
+  // background-repeat: no-repeat;
+  background: $color-primary;
   color: $color-white;
   display: flex;
   height: 100%;
@@ -423,7 +424,7 @@ footer {
 @media only screen and (min-width : 768px) {
 
   nav.navbar{
-    background: $color-primary;
+    background: transparent;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
     -o-transition: all .5s ease;
