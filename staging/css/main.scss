@@ -19,10 +19,6 @@ $spacing-24: 24px;
 $spacing-36: 36px;
 $spacing-48: 48px;
 
-
-
-
-$footer-height: 60px;
 $font-size: 18px;
 $font-heading: 'Ubuntu', sans-serif;
 $font-body: 'Open Sans', sans-serif;
@@ -48,9 +44,16 @@ html{
 
 
 body{
-   padding-bottom: $footer-height;
    background: $color-primary;
+   display: flex;
+   flex-direction: column;
+
+   .the-one-wrapper-to-rule-them-all{
+    flex: 1 0 auto;
+  }
 }
+
+
 
 
 h1, .h1,
@@ -77,10 +80,23 @@ section{
 }
 
 nav.navbar{
+  background: $color-primary;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: .5s ease;
+
+  .navbar-toggler{
+    border: 0;
+
+    svg{
+      font-size: $spacing-36;
+    }
+  }
 
   a.navbar-brand{
     img{
-      height: 80px;
+      height: 60px;
       width: auto;
       opacity: .75;
       transition: .2s;
@@ -108,6 +124,22 @@ nav.navbar{
   
 }
 
+nav.nav-purple{
+  background: $color-primary-darker;
+
+  .navbar-brand{
+    img{
+      height: $spacing-48 !important;
+    }
+
+  }
+  .navbar-toggler{
+    svg{
+      font-size: $spacing-24 !important;
+    }
+  }
+}
+
 
 
 
@@ -119,18 +151,20 @@ nav.navbar{
   background: $color-primary-darker;
   border: 0;
   cursor: pointer;
-  padding: $spacing-8;
+  padding: $spacing-8 $spacing-24;
   margin-top: $spacing-36;
   border-radius: 100px;
   width: 100%;
   font-family: 'Ubuntu', sans-serif;
+  transition: .2s;
   
   svg{
     margin-left: 8px;
   }
 
   &:hover{
-
+    background: $color-accent;
+    transition: .2s;
   }
   &:visited{
     
@@ -195,7 +229,7 @@ a{
 //min up to 380
 
 .jumbotron{
-  padding: 4em 0 10em 0;
+  padding: 7em 0 10em 0;
   background: transparent;
   color: $color-white;
   text-align: center;
@@ -325,21 +359,40 @@ a{
 
 
 section#projects{
-  background: $color-primary-darker;
+  // background: $color-accent url('../img/trans-pattern.png') center top;
+  background-size: contain;
+  background-repeat: no-repeat;
   color: $color-white;
+  display: flex;
+  height: 100%;
+
+  h1{
+    text-align: center;
+    margin-bottom: $spacing-48;
+  }
+
+  .project-wrapper{
+    padding: $spacing-48 0;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    .prj-image{
+    }
+
+    .prj-desc{
+      align-self: middle;
+    }
+  }
 }
 
 
 
 //Navbar & Footer -----------------------------------------
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: $footer-height;
-  line-height: $footer-height; /* Vertically center the text there */
+footer {
+  padding: $spacing-48 0;
+  height: 100%;
   background-color: $color-dark-gray;
 }
 
@@ -354,7 +407,7 @@ section#projects{
 @media only screen and (min-width : 400px) {
   
 .jumbotron{
-  padding: 6em 0 12em 0;
+  padding: 8em 0 12em 0;
 
       .morph-wrap{
         
@@ -368,13 +421,72 @@ section#projects{
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+
+  nav.navbar{
+    background: $color-primary;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: .5s ease;
+  
+    .navbar-toggler{
+      border: 0;
+  
+      svg{
+        font-size: $spacing-36;
+      }
+    }
+  
+    a.navbar-brand{
+      img{
+        height: 80px;
+  
+        &:hover{
+          opacity: 1;
+          transition: .2s;
+        }
+      }
+      
+      
+    }
+    
+    
+  
+    .navbar-collapse{
+      ul.navbar-nav{
+        li.nav-item{
+          a.nav-link{
+            font-family: $font-heading;
+          }
+        }
+      }
+    }
+    
+  }
+
+  nav.nav-purple{
+    background: $color-primary-darker;
+  
+    .navbar-brand{
+      img{
+        height: $spacing-48 !important;
+      }
+  
+    }
+    .navbar-toggler{
+      svg{
+        font-size: $spacing-24 !important;
+      }
+    }
+  }
+
   .btn-primary{
     width: auto;
     margin-top: 0;
   }
 
   .jumbotron{
-    padding: 6em 0 7em 0;
+    padding: 8em 0 7em 0;
 
     h1{
       font-size: 80px;
