@@ -20,8 +20,10 @@ $spacing-36: 36px;
 $spacing-48: 48px;
 
 $font-size: 18px;
-$font-heading: 'Ubuntu', sans-serif;
-$font-body: 'Open Sans', sans-serif;
+@import '_fonts.scss';
+$font-heading: 'Inter-Bold', sans-serif;
+$font-body: 'Inter-Regular', sans-serif;
+$font-size: 17px;
 
 
 //Basic ---------------------------------------------------
@@ -35,8 +37,6 @@ $font-body: 'Open Sans', sans-serif;
 
 html{
    overflow-x: hidden;
-   font-family: $font-body;
-   font-size: $font-size;
    position: relative;
    min-height: 100%;
    
@@ -45,6 +45,9 @@ html{
 
 body{
    background: $color-primary;
+   font-color: $color-dark-gray;
+   font-family: $font-body;
+   font-size: $font-size;
    display: flex;
    flex-direction: column;
 
@@ -79,6 +82,10 @@ section{
   padding: $spacing-36 0;
 }
 
+.show{
+  display: inline-flex !important;
+}
+
 nav.navbar{
   background: $color-primary;
   -webkit-transition: all .5s ease;
@@ -107,9 +114,8 @@ nav.navbar{
       }
     }
 
-    .brand-name{
+    span.brand-name{
       display: none;
-      display: inline-flex;
       vertical-align: middle;
       font-family: $font-heading;
       margin-left: $spacing-16;
@@ -124,7 +130,7 @@ nav.navbar{
     ul.navbar-nav{
       li.nav-item{
         a.nav-link{
-          font-family: $font-heading;
+          font-family: $font-body;
         }
       }
     }
@@ -136,6 +142,9 @@ nav.nav-purple{
   background: $color-primary-darker;
 
   .navbar-brand{
+    span.brand-name{
+      display: inline-flex !important;
+    }
     img{
       height: $spacing-48 !important;
     }
@@ -186,11 +195,11 @@ nav.nav-purple{
 }
 
 a{
-  color: $color-accent;
+  color: $color-primary-lighter;
 
 
   &:hover{
-    color: $color-primary-lighter;
+    color: $color-accent;
 
   }
   &:visited{
@@ -284,7 +293,7 @@ a{
 }
 
 
-#skills{
+#my-background{
   background: $color-light-gray;
 
   .backstory{
@@ -302,9 +311,6 @@ a{
 
         li{
           display: inline-block;
-
-          
-          
           a{
             font-size: 16px;
             color: $color-medium-gray;
@@ -323,9 +329,6 @@ a{
               color: $color-accent !important;
             }
           }
-
-          
-
         }
       } 
     }
@@ -338,18 +341,17 @@ a{
 .block{
   margin-bottom: $spacing-8;
   text-align: center;
-  background: $color-white;
-  border-right: 4px solid $color-light-gray;
-  border-left: 4px solid $color-light-gray;
   padding: $spacing-36;
 
   .block-icon{
     font-size: 40px;
     color: $color-light-gray;
     background: $color-accent;
+    text-align: center;
     width: 80px;
     height: 80px;
-    margin: 0 auto $spacing-24 auto;
+    margin: 0 auto;
+    margin-bottom: $spacing-24;
     border-radius: 50%;
 
     svg{
@@ -472,7 +474,7 @@ footer {
       ul.navbar-nav{
         li.nav-item{
           a.nav-link{
-            font-family: $font-heading;
+            font-family: $font-body;
           }
         }
       }
@@ -488,6 +490,19 @@ footer {
         height: $spacing-48 !important;
       }
   
+    }
+   
+    .navbar-collapse{
+      ul.navbar-nav{
+        li.nav-item{
+          a.nav-link{
+            font-family: $font-body;
+            
+              color: rgba(255,255,255,.85);
+            
+          }
+        }
+      }
     }
     .navbar-toggler{
       svg{
