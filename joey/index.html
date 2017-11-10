@@ -8,7 +8,7 @@
   <meta name="author" content="">
   <link rel="icon" href="img/favicon.ico">
 
-  <title>Stephen Cox - Coxy.io</title>
+  <title>Joey Mitchell</title>
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap-reboot.min.css" rel="stylesheet">
@@ -16,19 +16,19 @@
 
   <!-- Custom Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Slabo+13px" rel="stylesheet">
 
 
   <!-- Custom styles for this template -->
-  <link href="../staging/css/main.min.css" rel="stylesheet">
+  <link href="../css/main.min.css" rel="stylesheet">
 
   <!--js-->
-  <script defer src="../staging/js/packs/brands.min.js"></script>
-  <script defer src="../staging/js/packs/light.min.js"></script>
-  <script defer src="../staging/js/fontawesome.min.js"></script>
-  <script defer src="../staging/js/contact-me.js"></script>
-  <script defer src="../staging/js/validate.js"></script>
-  <script defer src="../staging/js/scrolling-nav.js"></script>
+  <script defer src="../js/packs/brands.min.js"></script>
+  <script defer src="../js/packs/light.min.js"></script>
+  <script defer src="../js/fontawesome.min.js"></script>
+  <script defer src="../js/contact-me.js"></script>
+  <script defer src="../js/validate.js"></script>
+  <script defer src="../js/scrolling-nav.js"></script>
 
 
 </head>
@@ -39,8 +39,7 @@
   <nav class="navbar navbar-dark navbar-expand-md fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="../staging/img/coxy-logo.svg" />
-        <span class="brand-name">Stephen Cox</span>
+        <span class="brand-name">Joseph A. Mitchell</span>
       </a>
       
       <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#topNav" aria-controls="topNav" aria-expanded="false"
@@ -51,13 +50,13 @@
       <div class="collapse navbar-collapse" id="topNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">About Me</a>
+            <a class="nav-link page-scroll" href="#skills">About Me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Projects</a>
+            <a class="nav-link page-scroll" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link page-scroll" href="#contact">Contact</a>
           </li>
 
         </ul>
@@ -70,34 +69,12 @@
   <div class="the-one-wrapper-to-rule-them-all">
 
     <div class="jumbotron">
-      <div class="morph-wrap">
-        <!-- <svg class="morph" width="1400" height="600" viewBox="0 0 1400 600">
-            <path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
-          </svg> -->
-
-        <svg id="the-blob" width="100vw" height="auto" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" filter="url(#goo)">
-          <defs>
-            <filter id="goo">
-              <!-- tympanus.net/codrops/creative-gooey-effects -->
-              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-              <feComposite in="SourceGraphic" in2="goo" operator="atop" />
-            </filter>
-          </defs>
-          <circle id="Circle1"></circle>
-          <circle id="Circle2"></circle>
-          <circle id="Circle3"></circle>
-          <circle id="Circle4"></circle>
-          <circle id="Circle5"></circle>
-          <circle id="Circle6"></circle>
-          <circle id="Circle7"></circle>
-        </svg>
-      </div>
+      
       <div class="container">
         <div class="row is-flex">
           <div class="col-md-12">
-            <h1 class="display-4">Stephen Cox</h1>
-            <p class="subtext mb-0">Web Designer/Developer</p>
+            <h1 class="display-4">Joseph A. Mitchell</h1>
+            <p class="subtext mb-0">Web Dev and Lint Licker</p>
           </div>
 
         </div>
@@ -111,7 +88,7 @@
         <div class="row justify-content-center">
           <div class="col-sm-8 backstory">
             <div class="profile-img">
-              <img class="img-fluid" src="../staging/img/propic.jpg" alt="Stephen Cox" title="Profile picture of Stephen Cox" />
+              <img class="img-fluid" src="../img/propic.png" alt="Joseph A. Mitchell" title="Profile picture of Joseph A. Mitchell" />
             </div>
             <h1 class="h3 text-center">My Background</h1>
             <p>Graduate of Miami University, OH with a BA in Interactive Media Studies. Currently working with
@@ -128,10 +105,6 @@
                   <a href="#">
                     <i class="fab fa-github"></i>GitHub</a>
                 </li>
-                <li>
-                  <a href="#">
-                    <i class="fab fa-dribbble"></i>Dribbble</a>
-                </li>
               </ul>
 
 
@@ -142,36 +115,54 @@
           <div class="col-sm-10">
 
             <div class="row">
-              <div class="col-md-6 block">
+              <div class="col-md-4 col-sm-6 block">
                 <div class="block-icon">
-                  <i class="fal fa-sitemap"></i>
+                  <i class="fab fa-js"></i>
                 </div>
 
-                <h1 class="h4">User Experience</h1>
-                <p>Graduate of Miami University, OH with a BS in Interactive Media Studies. Currently working with</p>
+                <h1 class="h4">Javascript</h1>
+                <p>Graduate of Miami University, OH with a BS</p>
               </div>
 
 
-              <div class="col-md-6 block">
+              <div class="col-md-4 col-sm-6 block">
                 <div class="block-icon">
                   <i class="fal fa-code"></i>
                 </div>
                 <h1 class="h4">Frontend Web Dev</h1>
-                <p>Graduate of Miami University, OH with a BS in Interactive Media Studies. Currently working with</p>
+                <p>Graduate of Miami University, OH with a BS</p>
+              </div>
+
+              <div class="col-md-4 col-sm-6 block">
+                <div class="block-icon">
+                  <i class="fab fa-python"></i>
+                </div>
+
+                <h1 class="h4">Javascript</h1>
+                <p>Graduate of Miami University, OH with a BS</p>
               </div>
               <div class="w-100"></div>
-              <div class="col-md-6 block">
+              <div class="col-md-4 col-sm-6 block">
                 <div class="block-icon">
-                  <i class="fal fa-pencil-alt"></i>
+                  <i class="fal fa-css3"></i>
                 </div>
                 <h1 class="h4">Visual Design</h1>
-                <p>Graduate of Miami University, OH with a BS in Interactive Media Studies. Currently working with</p>
+                <p>Graduate of Miami University, OH with a BS</p>
               </div>
-              <div class="col-md-6 block">
+              <div class="col-md-4 col-sm-6 block">
                 <div class="block-icon">
-                  <i class="fal fa-undo"></i>
+                  <i class="fal fa-html5"></i>
                 </div>
                 <h1 class="h4">Agile/Scrum</h1>
+                <p>Graduate of Miami University, OH with a BS</p>
+              </div>
+
+              <div class="col-md-4 col-sm-6 block">
+                <div class="block-icon">
+                  <i class="fab fa-js"></i>
+                </div>
+
+                <h1 class="h4">Javascript</h1>
                 <p>Graduate of Miami University, OH with a BS in Interactive Media Studies. Currently working with</p>
               </div>
             </div>
@@ -185,39 +176,6 @@
           <div class="col-sm-10">
             <h1> Projects</h1>
 
-            <div id="project-1" class="row project-wrapper">
-              <div class="col-sm-6  prj-image">
-                <img class="img-fluid" src="https://ms.960design.com/wp-content/uploads/c960d-support/ipad-pro.png" />
-              </div>
-              <div class="col-sm-6 prj-desc">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-
-            <div id="project-2" class="row project-wrapper project-wrapper-alt">
-              <div class="col-sm-6  prj-image order-md-2 order-sm-1">
-                <img class="img-fluid" src="https://ms.960design.com/wp-content/uploads/c960d-support/ipad-pro.png" />
-              </div>
-              <div class="col-sm-6 prj-desc order-md-1 order-sm-2">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-
-            </div>
-
-            <div id="project-1" class="row project-wrapper">
-              <div class="col-sm-6  prj-image">
-                <img class="img-fluid" src="https://ms.960design.com/wp-content/uploads/c960d-support/ipad-pro.png" />
-              </div>
-              <div class="col-sm-6 prj-desc">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
 
 
 

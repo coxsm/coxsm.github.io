@@ -2,10 +2,10 @@
 
 $font-body-color: #333;
 
-$color-primary: #363dc2;
+$color-primary: #3498db;
 $color-primary-lighter: lighten($color-primary, 10%);
-$color-primary-darker: #282faf;
-$color-accent: #00bfa5;
+$color-primary-darker: darken($color-primary, 10%);
+$color-accent: #2c3e50;
 $color-light-gray: #efefef;
 $color-medium-gray: #939393;
 $color-dark-gray: #151515;
@@ -20,7 +20,7 @@ $spacing-36: 36px;
 $spacing-48: 48px;
 
 $font-size: 18px;
-$font-heading: 'Ubuntu', sans-serif;
+$font-heading: 'Slabo 13px', serif;
 $font-body: 'Open Sans', sans-serif;
 
 
@@ -502,7 +502,7 @@ footer {
   }
 
   .jumbotron{
-    padding: 8em 0 7em 0;
+    padding: 6em 0 7em 0;
 
     h1{
       font-size: 80px;

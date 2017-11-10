@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    $('.brand-name').hide();
+});
+
 //jQuery to collapse the navbar on scroll
 $(window).bind('scroll', function () {
     if ($(window).scrollTop() > 100) {
@@ -13,7 +17,7 @@ $(window).bind('scroll', function () {
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        $('html, body').stop().animate({
+        $('.the-one-wrapper-to-rule-them-all').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
