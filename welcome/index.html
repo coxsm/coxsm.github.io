@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Welcome to R&P!</title>
+
+  <!-- CSS -->
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="flexbox">
+    <div id="welcome">
+
+
+      <!-- Edit the text of the iPad here - - - - - - - - - - - - - - -->
+      <span>Welcome to your new Cleveland Office!</span>
+
+
+
+    </div>
+  </div>
+
+
+  <video id="bgvid" playsinline muted autoplay>
+      <source src="assets/welcome.mp4" type="video/mp4">
+   </video>
+
+  <script type="text/javascript">
+    var start = 10.3 * 1000;
+    var end = 27.5 * 1000;
+
+    setTimeout(function() {
+      $('#welcome').addClass('show');
+    }, start);
+    setTimeout(function() {
+      $('#welcome').removeClass('show');
+    }, end);
+
+    document.querySelector('video').addEventListener('ended', function() {
+      console.count('loop restart');
+      setTimeout(function() {
+        $('#welcome').addClass('show');
+      }, start);
+      setTimeout(function() {
+        $('#welcome').removeClass('show');
+      }, end);
+
+      this.play();
+    })
+  </script>
+
+</body>
+
+</html>

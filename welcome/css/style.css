@@ -1,0 +1,45 @@
+@font-face {
+    font-family: Geomanist;
+    src: url(../assets/Geomanist-Bold.otf);
+}
+
+
+
+
+html {
+  background: #293143;
+  overflow: hidden;
+  color: white;
+  font-family: Geomanist;
+}
+
+
+
+video {
+  transition: 1s opacity;
+}
+
+#flexbox {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+#welcome {
+  font-size: 80px;
+  width: 24ch;
+  align-self: center;
+  text-align: center;
+  transition: opacity .3s;
+  opacity: 0;
+  margin-bottom: 180px;
+}
+
+#welcome.show{
+  opacity: 1;
+}
