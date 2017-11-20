@@ -11,17 +11,24 @@ html {
   overflow: hidden;
   color: white;
   font-family: Geomanist;
+  max-height: 1080px;
+  max-width: 1920px;
+  height: 1080px;
+  width: 1920px;
 }
 
 
 
 video {
   transition: 1s opacity;
+  max-height: 1080px;
+  max-width: 1920px;
+  height: 1080px;
+  width: 1920px;
 }
 
 #flexbox {
   position: absolute;
-
   display: flex;
   justify-content: center;
   align-items: center;
