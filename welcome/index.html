@@ -16,29 +16,7 @@
 
   <!-- JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript">
-    var start = 10.3 * 1000;
-    var end = 27.5 * 1000;
-
-    setTimeout(function() {
-      $('#welcome').addClass('show');
-    }, start);
-    setTimeout(function() {
-      $('#welcome').removeClass('show');
-    }, end);
-
-    document.querySelector('video').addEventListener('ended', function() {
-      console.count('loop restart');
-      setTimeout(function() {
-        $('#welcome').addClass('show');
-      }, start);
-      setTimeout(function() {
-        $('#welcome').removeClass('show');
-      }, end);
-
-      this.play();
-    })
-  </script>
+ 
 </head>
 
 <body>
@@ -59,7 +37,29 @@
       <source src="assets/welcome.mp4" type="video/mp4">
    </video>
 
-  
+   <script type="text/javascript">
+    var start = 10.3 * 1000;
+    var end = 27.5 * 1000;
+
+    // setTimeout(function() {
+    //   $('#welcome').addClass('show');
+    // }, start);
+    // setTimeout(function() {
+    //   $('#welcome').removeClass('show');
+    // }, end);
+
+    document.querySelector('video').addEventListener('ended', function() {
+      console.count('loop restart');
+      setTimeout(function() {
+        $('#welcome').addClass('show');
+      }, start);
+      setTimeout(function() {
+        $('#welcome').removeClass('show');
+      }, end);
+
+      this.play();
+    })
+  </script>
 
 </body>
 
