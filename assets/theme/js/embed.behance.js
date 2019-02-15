@@ -21,9 +21,9 @@ $.fn.embedBehance = function( options ) {
 	var settings = $.extend({
 
 		// default option values
-		owners: true,
-		appreciations: true,
-		views: true,
+		owners: false,
+		appreciations: false,
+		views: false,
 		publishedDate: true,
 		projectUrl: true,
 		fields: true,
@@ -32,8 +32,8 @@ $.fn.embedBehance = function( options ) {
 		userName: '',
 		infiniteScrolling: false,
 		imageCaption: false,
-		ownerLink: true,
-		description: true,
+		ownerLink: false,
+		description: false,
 		tags: true,
 		themeColor: '#2183ee',
 		animationDuration: 1000,
