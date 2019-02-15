@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="assets/dropdown/css/style.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="assets/theme/css/embed.behance.css" type="text/css"/>
   
   
   
@@ -151,22 +152,16 @@
             Recent Work</h2>
         <h3 class="mbr-section-subtitle display-5 align-center mbr-fonts-style mbr-light">
             My portfolio ranges from Web to Android and iOS.</h3>
+
+
         <div class="media-container-row pt-5 ">
-            <div class="card p-3 col-12 col-md-6">
-                <div class="card-wrapper ">
-                    <div class="card-img">
-                        <div class="mbr-overlay"></div>
-                        <div class="mbr-section-btn text-center"><a href="https://google.com" class="btn btn-primary display-4">Learn More</a></div>
-                        <img src="assets/images/background1.jpg" alt="Mobirise">
-                    </div>
-                    <div class="card-box">
-                        <h4 class="card-title mbr-fonts-style display-5">
-                            Project Title</h4>
-                        <p class="mbr-text mbr-fonts-style align-left display-7">
-                            Mobirise is an easy website builder - just drop site elements to your page, add content and style it to look</p>
-                    </div>
+            
+            
+            <!-- THE BEHANCE PORTFOLIO WILL BE PRINTED IN HERE -->
+				<div class="behance-container">
+
+                    <div class="eb-pagination-button" style="background-color: #2183ee"><span>Load More</span> <span class="icon-loading"></span> </div>
                 </div>
-            </div>
             
 
             
@@ -241,7 +236,8 @@
 </section>
 
 
-  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
   <script src="assets/popper/popper.min.js"></script>
   <script src="assets/tether/tether.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -253,7 +249,26 @@
   <script src="assets/mbr-popup-btns/mbr-popup-btns.js"></script>
   <script src="assets/parallax/jarallax.min.js"></script>
   <script src="assets/theme/js/script.js"></script>
+  <script src="assets/theme/js/embed.behance.js"></script>
   <script src="assets/formoid/formoid.min.js"></script>
+
+  <script>
+
+    $(document).ready(function(){
+
+         $('.behance-container').embedBehance({
+
+             // behance API Key
+            apiKey: 'wiwQqudJqtfJZJ9U2NEuGzjXg9o59a8j',
+
+            // Behance Username
+            userName: 'titanui',infiniteScrolling: false,
+
+        });
+
+    });
+
+</script>
   
   
 </body>
