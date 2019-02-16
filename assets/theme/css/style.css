@@ -217,7 +217,8 @@ figure[mbr-media-size] {
     width: auto; }
 
   .mbr-figure {
-    width: 100% !important; } }
+    width: 60% !important;
+    padding-top: 6rem; } }
 /*! Buttons */
 .mbr-section-btn {
   margin-left: -.25rem;
