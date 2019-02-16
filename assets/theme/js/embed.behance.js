@@ -1105,7 +1105,7 @@ $.fn.embedBehance = function( options ) {
 			// if there are other results to load I build the pagination button (if the infiniteScrolling is set to FALSE)
 			if(action == 'show' && settings.infiniteScrolling == false) {
 
-				$(behanceContainer).append('<div class="eb-pagination-button" style="background-color: ' + settings.themeColor + '"><span>Load More</span> <span class="icon-loading"></span> </div>');
+				$(behanceContainer).append('<div class="eb-pagination-button btn btn-primary"><span>Load More</span> <span class="icon-loading"></span> </div>');
 
 			} else if (action == 'remove') {
 
