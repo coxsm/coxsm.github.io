@@ -35,12 +35,12 @@
 								Reset Form
 							</a>
 						</li>
-						<li>
+						<!-- <li>
 							<a href="#">
 								<span id="account" class="uk-icon uk-icon-image uk-margin-small-right uk-border-circle" style="background-image: url(images/dark.jpg);"></span>
 								Logout
 							</a>
-						</li>
+						</li> -->
 						
 					</ul>
 				</div>
@@ -89,9 +89,9 @@
 
 
 	<!-- JS FILES -->
-	<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+	<!-- <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
 	<script>
-		// Initialize Firebase
+		
 		var config = {
 			apiKey: "AIzaSyB_MyK7Yx3aVGkj5OUeD7JJNJdjF-WM7OY",
 			authDomain: "paste-eater.firebaseapp.com",
@@ -105,7 +105,7 @@
 		function login(){
 			function newLoginHappened(user){
 				if(user){
-					//User has signed in
+					
 					app(user);
 				} else {
 					var provider = new firebase.auth.GoogleAuthProvider();
@@ -117,17 +117,14 @@
 		}
 
 		function app(user){
-			// user.displayName
-			// user.email
-			// user.photoURL
-			// user.uid
+
 			document.getElementById('account').innerHTML(user.displayName);
 			document.getElementById('account').setAttribute("src", user.photoURL);
 		}
 
 		window.onload = login;
 
-	</script>
+	</script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit-icons.min.js"></script>
 	<script src="js/main.js"></script>
