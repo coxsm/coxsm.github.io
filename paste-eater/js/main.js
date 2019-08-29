@@ -21,10 +21,10 @@ document.getElementById('convert-button').onclick = function() {
    document.execCommand("copy");
  
    UIkit.notification({
-    message: '<span uk-icon=\'icon: check\'></span>  Copied to clipboard',
-    status: 'primary',
-    pos: 'bottom-right',
-    timeout: 3000
+    message: '<span uk-icon=\'icon: check\'></span>  Text copied to clipboard',
+    status: 'success',
+    pos: 'top-center',
+    timeout: 2000
   });
 }
 
