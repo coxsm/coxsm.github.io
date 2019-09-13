@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Paste Eater - v1.0.1</title>
+	<link rel="icon" href="img/favicon.ico">
+	<!-- CSS FILES -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/css/uikit.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.min.css">
+</head>
+
+<body>
+
+
+	<header>
+		<div class="uk-container-expand">
+
+			<nav class="uk-navbar-transparent uk-section" uk-navbar>
+
+
+				<div class="uk-navbar-left">
+					<div class="uk-navbar-item uk-padding-remove">
+						<h1 class="uk-margin-remove-bottom">🤤 Paste Eater</h1>
+						<p class="uk-text-large uk-margin-remove-top uk-margin-remove-bottom uk-margin-small-left">v1.0.1</p>
+					</div>
+				</div>
+
+				<div class="uk-navbar-right">
+					<ul class="uk-navbar-nav">
+						<li id="reset-button">
+							<a href="#">
+								<span class="uk-icon uk-margin-small-right" uk-icon="icon: refresh"></span>
+								Reset Form
+							</a>
+						</li>
+						<!-- <li>
+							<a href="#">
+								<span id="account" class="uk-icon uk-icon-image uk-margin-small-right uk-border-circle" style="background-image: url(images/dark.jpg);"></span>
+								Logout
+							</a>
+						</li> -->
+						
+					</ul>
+				</div>
+
+			</nav>
+		</div>
+	</header>
+
+	<section class="uk-section uk-section-muted">
+		<div class="uk-container-expand">
+			<div class="uk-grid">
+				<div class="uk-width-1-2">
+					<span class="uk-text-large uk-margin-medium-right">Raw Paste Data</span>
+					
+				</div>
+				<div class="uk-width-1-2">
+					<span class="uk-text-large text-padding">Beautiful Text</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="uk-section uk-section-secondary uk-padding-remove">
+		<div class="uk-container-expand editor-container">
+			<div class="uk-grid uk-grid-collapse">
+				<div class="uk-width-1-2">
+					<div class="uk-margin">
+						<textarea id="input" class="uk-textarea" rows="5" placeholder="CTRL-V your data here"></textarea>
+					</div>
+				</div>
+				<div class="uk-width-1-2">
+					<div class="uk-margin">
+						<textarea id="output" class="uk-textarea" rows="5" placeholder="Your text will automagically appear here"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="button-container">
+				<button id="convert-button" href="#" class="uk-icon-button uk-button-primary" uk-icon="icon: arrow-right; ratio: 2" uk-tooltip="title:Format Text; pos: top"
+				 type="button"></button>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- JS FILES -->
+	<!-- <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+	<script>
+		
+		var config = {
+			apiKey: "AIzaSyB_MyK7Yx3aVGkj5OUeD7JJNJdjF-WM7OY",
+			authDomain: "paste-eater.firebaseapp.com",
+			databaseURL: "https://paste-eater.firebaseio.com",
+			projectId: "paste-eater",
+			storageBucket: "paste-eater.appspot.com",
+			messagingSenderId: "139346006325"
+		};
+		firebase.initializeApp(config);
+
+		function login(){
+			function newLoginHappened(user){
+				if(user){
+					
+					app(user);
+				} else {
+					var provider = new firebase.auth.GoogleAuthProvider();
+					firebase.auth().signInWithRedirect(provider);
+				}
+			}
+
+			firebase.auth().onAuthStateChanged(newLoginHappened);
+		}
+
+		function app(user){
+
+			document.getElementById('account').innerHTML(user.displayName);
+			document.getElementById('account').setAttribute("src", user.photoURL);
+		}
+
+		window.onload = login;
+
+	</script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit-icons.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
