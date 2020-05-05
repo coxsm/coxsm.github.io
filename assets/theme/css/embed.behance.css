@@ -56,9 +56,9 @@
 }
 
 .eb-pagination-button, .eb-container aside .wrap-project-url a{
-	min-height: 44px;
+	min-height: 34px;
 	font-size: 1rem;
-	line-height: 44px;
+	line-height: 34px;
 	font-weight: 400;
 	border-radius: 4px;
 	cursor: pointer;
@@ -598,7 +598,7 @@ body.eb-detail-modal-active{
 }
 
 .eb-container aside.open .bh-show {
-	color: #f;
+	color: #fff;
 	background-color: #f8f8f8;
 }
 
